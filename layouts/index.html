@@ -1,10 +1,17 @@
 {{ define "main" }}
-	<main>
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-		{{ range $paginator.Pages }}
-			{{ .Render "summary" }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
-	</main>
-{{ partial "sidebar.html" . }}
+<main class="content">
+	<html>
+	<body>
+		<h1>Personal Website of William Lim</h1>
+		<p>Software Developer located in New York City</p>
+		<section>
+			<ul>
+				<li>
+					<h2>Projects</h2>
+					<p>Gin Rummy Online</p>
+				</li>
+			</ul>
+		</section>
+	</body>
+</main>
 {{ end }}
